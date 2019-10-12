@@ -34,5 +34,10 @@ npm run test
 npm run lint
 ```
 
+### output webpack config
+```
+vue inspect > output.js
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
