@@ -1,5 +1,5 @@
 
-# my-manage-sys
+# manage-pool
 
 后台管理系统，前端采用`vue`，后端采用`express`搭建一个能够与mysql数据库进行交互的api接口
 
