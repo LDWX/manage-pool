@@ -1,17 +1,10 @@
-var express = require('express');
-let mysql = require('./mysql/mysql.js');
+const express = require('express');
+const bodyParser = require('body-parser')
+const InitManager = require('./core/init')
 
 var app = express();
-
-app.get('/test', function(req, res){
-  mysql.query('select * from company_info', (err, rows) => {
-    // if(err != null) {
-    // }
-    console.log("rows: ", rows)
-    console.log("err: ", err)
-    res.send(rows)
-  })
-});
+app.use(bodyParser.json());
+InitManager.initCore(app)
 
 var server = app.listen(3000, () => {
   console.log(server.address())
