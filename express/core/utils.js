@@ -1,5 +1,5 @@
 const promisic = function (func) {
-  return function () {
+  // return function () {
     return new Promise((resolve, reject) => {
       func(...arguments, function(err, rows){
         if(err) {
@@ -9,7 +9,7 @@ const promisic = function (func) {
         }
       });
     });
-  };
+  // };
 };
 
 module.exports = {

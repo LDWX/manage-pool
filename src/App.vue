@@ -17,6 +17,26 @@
 export default {
   name: 'app',
   components: {
+  },
+  methods: {
+    init() {
+      const vm = this
+      // vm.axios.get('/test')
+      //   .then(res => {
+      //     let data = res.data
+      //     // vm.testVal = data
+      //     console.log(data)
+      //   })
+      vm.axios.get('/v1/user/list')
+        .then(res => {
+          let data = res.data
+          vm.testVal = data
+          console.log(data)
+        })
+    }
+  },
+  mounted() {
+    this.init()
   }
 }
 </script>
